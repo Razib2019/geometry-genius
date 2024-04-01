@@ -17,9 +17,13 @@
       <!-- Main Content Container -->
       <div class="flex flex-col md:flex-row">
         <!-- Shape Card Container -->
-        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
           <!-- Triangle Card-->
-          <div class="card w-96 bg-base-200 shadow-xl p-2">
+          <div
+            class="card w-96 bg-base-200 shadow-xl p-2 border-2 border-gray-700"
+          >
             <figure>
               <img src="./images/triangle.png" alt="Triangle" />
             </figure>
@@ -29,7 +33,7 @@
               <div class="flex items-center justify-center my-2">
                 <!-- Triangle Base -->
                 <input
-                  class="w-24 text-2xl p-2 rounded-sm mb-2"
+                  class="w-24 text-2xl p-2 rounded-sm"
                   type="text"
                   name=""
                   id="triangle-base"
@@ -47,8 +51,8 @@
                 <span class="ml-2">cm</span>
               </div>
               <div>
-                <p class="text-2xl text-center">
-                  Area: <span id="triangle-area"></span>
+                <p class="text-2xl text-center my-2">
+                  Area: <span id="triangle-area">0</span>
                   <span>cm<sup>2</sup></span>
                 </p>
               </div>
@@ -63,7 +67,9 @@
             </div>
           </div>
           <!-- Rectangle Card-->
-          <div class="card w-96 bg-base-200 shadow-xl p-2">
+          <div
+            class="card w-96 bg-base-200 shadow-xl p-2 border-2 border-gray-700"
+          >
             <figure>
               <img src="./images/rectangle.png" alt="Rectangle" />
             </figure>
@@ -73,7 +79,7 @@
               <div class="flex items-center justify-center my-2">
                 <!-- Rectangle Width -->
                 <input
-                  class="w-24 text-2xl p-2 rounded-sm mb-2"
+                  class="w-24 text-2xl p-2 rounded-sm"
                   type="text"
                   name=""
                   id="rectangle-width"
@@ -91,14 +97,108 @@
                 <span class="ml-2">cm</span>
               </div>
               <div>
-                <p class="text-2xl text-center">
-                  Area: <span id="rectangle-area"></span>
+                <p class="text-2xl text-center my-2">
+                  Area: <span id="rectangle-area">0</span>
                   <span>cm<sup>2</sup></span>
                 </p>
               </div>
               <div class="card-actions">
                 <button
                   onclick="calculateRectangleArea()"
+                  class="btn btn-primary w-full"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Parallelogram Card-->
+          <div
+            class="card w-96 bg-base-200 shadow-xl p-2 border-2 border-gray-700"
+          >
+            <figure>
+              <img src="./images/parallelogram.png" alt="Parallelogram" />
+            </figure>
+            <div class="card-body">
+              <h2 class="text-center text-4xl">Parallelogram</h2>
+              <p class="text-center text-3xl my-2">Area (A) = b x h</p>
+              <div class="flex items-center justify-center my-2">
+                <!-- Parallelogram base -->
+                <input
+                  class="w-24 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="parallelogram-base"
+                  placeholder="b"
+                />
+                <span class="mr-4 ml-2">cm</span>
+                <!-- Parallelogram Height -->
+                <input
+                  class="w-24 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="parallelogram-height"
+                  placeholder="h"
+                />
+                <span class="ml-2">cm</span>
+              </div>
+              <div>
+                <p class="text-2xl text-center my-2">
+                  Area: <span id="parallelogram-area">0</span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+              </div>
+              <div class="card-actions">
+                <button
+                  onclick="calculateParallelogramArea()"
+                  class="btn btn-primary w-full"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Rhombus Card-->
+          <div
+            class="card w-96 bg-base-200 shadow-xl p-2 border-2 border-gray-700"
+          >
+            <figure>
+              <img src="./images/rhombus.png" alt="rhombus" />
+            </figure>
+            <div class="card-body">
+              <h2 class="text-center text-4xl">Rhombus</h2>
+              <p class="text-center text-3xl my-2">
+                Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub>
+              </p>
+              <div class="flex items-center justify-center my-2">
+                <!-- Rhombus d1 -->
+                <input
+                  class="w-24 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="rhombus-d1"
+                  placeholder="d1"
+                />
+                <span class="mr-4 ml-2">cm</span>
+                <!-- Rhombus d2 -->
+                <input
+                  class="w-24 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="rhombus-d2"
+                  placeholder="d2"
+                />
+                <span class="ml-2">cm</span>
+              </div>
+              <div>
+                <p class="text-2xl text-center my-2">
+                  Area: <span id="rhombus-area">0</span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+              </div>
+              <div class="card-actions">
+                <button
+                  onclick="calculateRhombusArea()"
                   class="btn btn-primary w-full"
                 >
                   Calculate
@@ -115,5 +215,7 @@
     </main>
     <script src="./scripts/triangle-calculate.js"></script>
     <script src="./scripts/rectangle-calculate.js"></script>
+    <script src="./scripts/parallelogram-calculate.js"></script>
+    <script src="./scripts/rhombus-calculate.js"></script>
   </body>
 </html>
