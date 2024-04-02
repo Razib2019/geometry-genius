@@ -8,15 +8,11 @@ Step-05: Convert the value to a number. Use parseFloat
 */
 function calculateTriangleArea() {
   // Get Triangle Base Value
-  const triangleBaseInput = document.getElementById("triangle-base");
-  const triangleBaseText = triangleBaseInput.value;
-  const base = parseFloat(triangleBaseText);
+  const base = getInputValueById("triangle-base");
   //   console.log(base);
 
   //   Get Triangle Height Value
-  const triangleHeightInput = document.getElementById("triangle-height");
-  const triangleHeightText = triangleHeightInput.value;
-  const height = parseFloat(triangleHeightText);
+  const height = getInputValueById("triangle-height");
   //   console.log(height);
 
   //   Calculate Triangle Area
@@ -24,6 +20,5 @@ function calculateTriangleArea() {
   //   console.log("Area Of the Triangle is: ", area);
 
   //   Display Triangle Area
-  const triangleAreaSpan = document.getElementById("triangle-area");
-  triangleAreaSpan.innerText = area;
+  setInnerTextById("triangle-area", area);
 }

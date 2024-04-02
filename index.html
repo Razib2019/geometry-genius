@@ -12,7 +12,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="m-8">
-    <header></header>
+    <header
+      class="bg-[#a4d4f0] px-10 py-5 rounded-lg flex justify-between items-center mb-4"
+    >
+      <div>
+        <h1 class="text-4xl text-black font-bold">Interactive</h1>
+        <p class="text-2xl text-gray-600">Geometry Genius</p>
+      </div>
+      <div><button class="btn btn-primary text-white">Blog</button></div>
+    </header>
     <main>
       <!-- Main Content Container -->
       <div class="flex flex-col md:flex-row">
@@ -22,7 +30,7 @@
         >
           <!-- Triangle Card-->
           <div
-            class="card w-96 bg-base-200 shadow-xl p-2 border-2 border-gray-700"
+            class="card w-96 bg-base-200 hover:bg-[#dd6bc4] hover:text-white shadow-xl p-2 border-2 border-gray-700"
           >
             <figure>
               <img src="./images/triangle.png" alt="Triangle" />
@@ -68,7 +76,7 @@
           </div>
           <!-- Rectangle Card-->
           <div
-            class="card w-96 bg-base-200 shadow-xl p-2 border-2 border-gray-700"
+            class="card w-96 bg-base-200 hover:bg-[#582fa5] hover:text-white shadow-xl p-2 border-2 border-gray-700"
           >
             <figure>
               <img src="./images/rectangle.png" alt="Rectangle" />
@@ -114,7 +122,7 @@
           </div>
           <!-- Parallelogram Card-->
           <div
-            class="card w-96 bg-base-200 shadow-xl p-2 border-2 border-gray-700"
+            class="card w-96 bg-base-200 hover:bg-[#af3165] hover:text-white shadow-xl p-2 border-2 border-gray-700"
           >
             <figure>
               <img src="./images/parallelogram.png" alt="Parallelogram" />
@@ -160,7 +168,7 @@
           </div>
           <!-- Rhombus Card-->
           <div
-            class="card w-96 bg-base-200 shadow-xl p-2 border-2 border-gray-700"
+            class="card w-96 bg-base-200 hover:bg-[#6d3fec] hover:text-white shadow-xl p-2 border-2 border-gray-700"
           >
             <figure>
               <img src="./images/rhombus.png" alt="rhombus" />
@@ -208,7 +216,7 @@
           </div>
           <!-- Pentagon Card-->
           <div
-            class="card w-96 bg-base-200 shadow-xl p-2 border-2 border-gray-700"
+            class="card w-96 bg-base-200 hover:bg-[#227c70] hover:text-white shadow-xl p-2 border-2 border-gray-700"
           >
             <figure>
               <img src="./images/pentagon.png" alt="Pentagon" />
@@ -254,7 +262,7 @@
           </div>
           <!-- Ellipse Card-->
           <div
-            class="card w-96 bg-base-200 shadow-xl p-2 border-2 border-gray-700"
+            class="card w-96 bg-base-200 hover:bg-[#1d6b24] hover:text-white shadow-xl p-2 border-2 border-gray-700"
           >
             <figure>
               <img src="./images/ellipse.png" alt="Ellipse" />
@@ -300,8 +308,13 @@
           </div>
         </div>
         <!-- Area Calculation Container -->
-        <div class="w-96 border-2 border-gray-700 rounded-md">
-          <h3 class="text-3xl text-center p-4">Area Calculation</h3>
+        <div
+          id="area-calculation-container"
+          class="w-96 border-2 border-gray-700 rounded-md"
+        >
+          <h3 class="text-3xl text-center p-4 underline underline-offset-4">
+            Area Calculation
+          </h3>
         </div>
       </div>
     </main>
@@ -311,5 +324,6 @@
     <script src="./scripts/rhombus-calculate.js"></script>
     <script src="./scripts/pentagon-calculate.js"></script>
     <script src="./scripts/ellipse-calculate.js"></script>
+    <script src="./scripts/common-function.js"></script>
   </body>
 </html>

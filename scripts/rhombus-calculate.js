@@ -1,14 +1,10 @@
 function calculateRhombusArea() {
   // Get Rhombus d1 Value
-  const rhombusd1Input = document.getElementById("rhombus-d1");
-  const rhombusd1Text = rhombusd1Input.value;
-  const d1 = parseFloat(rhombusd1Text);
+  const d1 = getInputValueById("rhombus-d1");
   //   console.log(d1);
 
   // Get Rhombus d2 Value
-  const rhombusd2Input = document.getElementById("rhombus-d2");
-  const rhombusd2Text = rhombusd2Input.value;
-  const d2 = parseFloat(rhombusd2Text);
+  const d2 = getInputValueById("rhombus-d2");
   //   console.log(d2);
 
   //   Calculate Rhombus Area
@@ -16,6 +12,5 @@ function calculateRhombusArea() {
   //   console.log("Area Of the Rhombus is: ", area);
 
   //   Display Rhombus Area
-  const rhombusAreaSpan = document.getElementById("rhombus-area");
-  rhombusAreaSpan.innerText = area;
+  setInnerTextById("rhombus-area", area);
 }

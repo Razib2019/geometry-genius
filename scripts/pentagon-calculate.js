@@ -1,14 +1,10 @@
 function calculatePentagonArea() {
   // Get Pentagon p Value
-  const pentagonPInput = document.getElementById("pentagon-p");
-  const pentagonPText = pentagonPInput.value;
-  const p = parseFloat(pentagonPText);
+  const p = getInputValueById("pentagon-p");
   //   console.log(p);
 
   // Get Pentagon b Value
-  const pentagonBInput = document.getElementById("pentagon-b");
-  const pentagonBText = pentagonBInput.value;
-  const b = parseFloat(pentagonBText);
+  const b = getInputValueById("pentagon-b");
   //   console.log(b);
 
   //   Calculate Pentagon Area
@@ -16,6 +12,5 @@ function calculatePentagonArea() {
   //   console.log("Area Of the Pentagon is: ", area);
 
   //   Display Pentagon Area
-  const pentagonAreaSpan = document.getElementById("pentagon-area");
-  pentagonAreaSpan.innerText = area;
+  setInnerTextById("pentagon-area", area);
 }
